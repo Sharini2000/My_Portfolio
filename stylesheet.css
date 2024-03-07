@@ -1,0 +1,494 @@
+ 
+
+body
+{
+    color: #ededed;
+	margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2yUIHdbL92O0ivYU5btvbgvD-1xI40gUDFEFPr9xKJiIxpWB0Pmx9xxo3FDy6du_Ulro&usqp=CAU) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header
+{
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0%;
+	background: #051129;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+.logo{
+    position: relative;
+	font-size: 25px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+	margin-left: 10%;
+	cursor: default;
+	opacity: 0;
+	animation: slideRight 0.5s ease forwards;
+}
+.navbar {
+    width: 60%; /* Adjust width */
+    margin-right: 10%; /* Adjust margin */
+    text-align: right; /* Align links to the right */
+}
+.navbar a {
+		display: inline-block;
+		font-size: 25px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+		margin-left: 35px;
+		transition: .3s;
+		opacity: 0;
+	    animation: slideTop .5s ease forwards;
+		
+}
+.navbar a:hover{
+	color: #0ef;
+}
+.home {
+	position: relative;
+	width: 100%;
+	justify-content: space-between;
+	height: 100vh;
+	
+	display: flex;
+	align-items: center;
+	padding: 70px 10% 0;
+}
+.home-content {
+	max-width: 600px;
+}
+.home-content h3 {
+	font-size: 32px;
+	font-weight: 700;
+	opacity: 0;
+	animation: slideBottom 0.5s ease forwards;
+}
+.home-content h3:nth-of-type(2){
+	margin-bottom: 30px;
+}
+.home-content h3 span{
+	color: #0ef;
+}
+.home-content h1 {
+	font-size: 45px;
+	font-weight: 700;
+	margin: -3px 0;
+	opacity: 0;
+	animation: slideRight 1s ease forwards;
+	animation-delay: 1s;
+}
+.home-content p {
+	font-size: 20px;
+	opacity: 0;
+	animation: slideRight 1s ease forwards;
+	animation-delay: 1s;
+}
+.about{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap:1.5rem;
+	
+}
+.about-img img {
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    border-radius: 50%; /* Apply a border-radius of 50% to create a circle */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    transform: translateX(200px); /* Move the image 20 pixels to the right */
+	animation: glow 1.5s infinite alternate;
+}
+
+
+.about-text h2{
+		font-size: 60px;
+}
+.about-text h2 span{
+	color: #0ef
+}
+
+.about-text h4{
+	font-size: 29px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 1.7;
+	margin: 15px 0 30px;
+}
+.about-text p{
+	color: aliceblue;
+	font-size: 20px;
+	line-height: 1.4;
+	margin-bottom: 4rem;
+	margin-right: 5rem;
+	
+}
+.services{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap:1.5rem;
+	
+	padding: 70px 10% 0;
+}
+
+.services h1{
+	font-size: 45px; 
+	font-weight: 800;
+}
+.services h1 span{
+	color: #0ef
+}
+.neon-text {
+    color: #0ef; /* Neon color */
+}
+
+.white-text {
+    color: #ffffff; /* White color */
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.azure1{
+color: #ffffff; /* White color */
+    font-size: 20px;
+    font-weight: 400;
+	
+}	
+/* CSS for Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+.certifications {
+    position: relative;
+    width: 80%;
+    justify-content: flex-end; /* Align content to the right */
+    height: auto; /* Adjust height */
+    
+    display: flex;
+    flex-direction: column; /* Change to column direction */
+    align-items: flex-end; /* Align items to the right */
+    padding: 70px 10% 0;
+}
+
+.certifications h1 {
+    font-size: 3em;
+    color: #fff; /* Adjust text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: right; /* Align text to right */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+}
+
+.certifications h1 span {
+    color: #0ef; /* Adjust color */
+}
+
+.certifications-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Set width of the list */
+    max-width: 600px; /* Adjust max width if needed */
+    align-self: flex-end; /* Align list to the right */
+	
+}
+
+
+.cert-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition effect */
+    width: 100%;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.cert-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 10px #0ef; /* Apply the glowing effect on hover */
+}
+.projects{
+	position: relative;
+    width: 80%;
+    justify-content: left; 
+    height: auto; 
+   
+    display: flex;
+    flex-direction: column; 
+    align-items: left; /* Align items to the right */
+    padding: 70px 10% 0;
+}
+.projects h1{
+	font-size: 2.8em;
+    color: #fff; /* Adjust text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: left; /* Align text to right */
+    margin-bottom: 20px;
+}
+.projects h1 span{
+	color: #0ef;
+}
+.project-list {
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    align-self: left;
+}
+
+.proj-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition effect */
+    width: 100%;
+    text-align: left;
+    text-decoration: underline;
+}
+.proj-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 10px #0ef; /* Apply the glowing effect on hover */
+}
+.contact {
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 70px 10% 0;
+	
+}
+
+.contact-text {
+    text-align: right;
+}
+
+.contact-list {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.contact-icons {
+    margin-right: 10%; /* Adjust margin as needed */
+}
+
+
+
+.contact-text h2{
+	font-size: 55px;
+	line-height:1;
+	text-align: center;
+}
+.contact-text h2 span{
+	color: #0ef;
+}
+.contact-text h4{
+	margin: 15px 0;
+	color: rgb(228,228,228);
+	font-size: 20px;
+	font-weight: 600;
+	
+}
+
+
+.contact-list li{
+	margin-bottom: 20px;
+	display: block;
+}
+.contact-list i{
+	display: inline-block;
+	color: #0ef;
+	font-size: 20px;
+	font-weight:600;
+	transition: all .40s ease;
+}
+.contact-list li a:hover{
+	transform: scale(1.01) translateY(-5px);
+	color: #0ef;
+}
+.contact-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    /* Corrected animation delay syntax */
+    animation-delay: calc(0.2s * var(--i));
+}
+	
+.contact-icons i:hover {
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+	float: right;
+	
+	
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align form items to the right */
+}
+.contact-list a i {
+    color: #ffffff !important; /* Change color to white */
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form input[type="text"],
+.contact-form form textarea {
+    width: 100%; /* Adjust width as needed */
+    padding: 18px;
+    background: #C0C0C0;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    align-self: flex-end; /* Align input fields to the right */
+}
+
+.contact-form form .send{
+	position: relative;
+	margin-left: auto;
+	margin-right:0;
+	
+	padding: 14px 60px;
+	background: #0ef;
+	border-radius: 40px;
+	font-size: 18px;
+	color: #081b29;
+	letter-spacing: 1px;
+	text-decoration: none;
+	font-weight: 600;
+	opacity: 0;
+	animation: slideTop 1s ease forwards;
+	animation-delay: 2s;
+	box-shadow: 0 0 5px #0ef, 
+	0 0 25px #0ef;
+	align-items: flex-end; 
+	
+}
+.contact-form form.send:hover {
+	box-shadow: 0 0 5px #0ef,
+	0 0 25px #0ef, 0 0 50px #0ef,
+	0 0 100px #0ef, 0 0 200px #0ef;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes slideRight {
+	0% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes slideTop {
+	0% {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@keyframes slideBottom {
+	0% {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@keyframes slideBottom {
+	0% {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px 0 #0ef; /* Initial glow effect */
+    }
+    to {
+        box-shadow: 0 0 40px 20px #0ef; /* Final glow effect */
+    }
+}
+
+
+	
+	
